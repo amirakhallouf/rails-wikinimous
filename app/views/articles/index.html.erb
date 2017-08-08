@@ -1,0 +1,20 @@
+<h1>Articles#index</h1>
+<p>Find me in app/views/articles/index.html.erb</p>
+
+
+<p><% @articles.each do |article| %></p>
+  <h2><%= article.title %></h2>
+  <p><%= article.content %></p>
+  <!-- <p><%= link_to article.title, articles_path(id: @articles.ids) %></p> -->
+
+  <%= link_to 'Show the view', article_path(article) %>
+
+  <br>
+  <%= link_to 'Show the edited view', edit_article_path(article) %>
+  <br>
+  <%= link_to 'Delete', article_path(article),
+    method: :Delete,
+    data: { confirm: "Are are sure?"} %>
+    <hr>
+<% end %>
+<p><%= link_to 'Go to new article', new_article_path%></p>

@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+10.times do
+  a = Article.new(title: Faker::HarryPotter.book, content: Faker::HarryPotter.quote) #Faker
+  a.save
+end
+
+
+# Faker::HarryPotter.quote      generate randomly 10 fake quotes
+#seed means inserting data in our data base

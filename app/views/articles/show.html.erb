@@ -1,0 +1,8 @@
+<h1>Articles#show</h1>
+<p>Find me in app/views/articles/show.html.erb</p>
+
+<h2><%= @articles.title %></h2>
+<p><%= @articles.content %></p>
+<p>Created at: <%= @articles.created_at%></p>
+<p>Updated at: <%= @articles.updated_at%></p>
+<p><%= link_to 'Go to the home page',articles_path%></p>
